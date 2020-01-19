@@ -1,8 +1,6 @@
 ---
-title: Home
-layout: default.hbs
+title: Home page
+layout: index.hbs
 ---
 
-# Homepage
-
-Look around the site or explore the [code](https://github.com/andreasvirkus/metalsmith-boilerplate)
+This should be the home page.
