@@ -1,5 +1,4 @@
 const metalsmith = require('metalsmith');
-const flatten = require('metalsmith-flatten');
 const drafts = require('metalsmith-drafts');
 const markdown = require('metalsmith-markdown');
 const collections = require('metalsmith-collections');
@@ -37,7 +36,6 @@ metalsmith(__dirname)
     .source('./src')
     .destination('./dist')
     .clean(true)
-    .use(flatten("src"))
     .use(drafts())
     .use(collections({
         notes: {
