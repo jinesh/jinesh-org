@@ -1,5 +1,4 @@
 const metalsmith = require('metalsmith');
-const drafts = require('metalsmith-drafts');
 const markdown = require('metalsmith-markdown');
 const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
@@ -36,15 +35,22 @@ metalsmith(__dirname)
     .source('./src')
     .destination('./dist')
     .clean(true)
-    .use(drafts())
     .use(collections({
-        pages: {
-            pattern: '*.md',
-            sortBy: 'date'
+        projects: {
+            pattern: 'projects/*.md',
+            sortBy: 'date',
+            reverse: true
+        },
+        notes: {
+            pattern: 'notes/*.md',
+            sortBy: 'date',
+            reverse: true
         }
     }))
     .use(markdown())
-    .use(permalinks())
+    .use(permalinks({
+        permalinks: ':title'
+    }))
     .use(layouts({
         engine: 'handlebars',
         directory: 'layouts',
