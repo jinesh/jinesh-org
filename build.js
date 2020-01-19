@@ -39,12 +39,14 @@ metalsmith(__dirname)
         projects: {
             pattern: 'projects/*.md',
             sortBy: 'date',
-            reverse: true
+            reverse: true,
+            permalinks: ':title'
         },
         notes: {
             pattern: 'notes/*.md',
             sortBy: 'date',
-            reverse: true
+            reverse: true,
+            permalinks: ':title'
         }
     }))
     .use(markdown())
