@@ -1,6 +1,6 @@
 ---
 title: Project Sample
-permalink: project
+permalink: /project
 ---
 
 This is a Project sample.
