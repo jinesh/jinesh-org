@@ -49,7 +49,8 @@ metalsmith(__dirname)
     }))
     .use(markdown())
     .use(permalinks({
-        permalinks: '/:title'
+        permalinks: '/:title',
+        relative: false
     }))
     .use(layouts({
         engine: 'handlebars',
