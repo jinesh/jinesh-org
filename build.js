@@ -38,14 +38,9 @@ metalsmith(__dirname)
     .clean(true)
     .use(drafts())
     .use(collections({
-        posts: {
-            pattern: 'posts/*.md',
-            sortBy: 'date',
-            reverse: true
-        },
         pages: {
             pattern: '*.md',
-            sortBy: 'menu-order'
+            sortBy: 'date'
         }
     }))
     .use(markdown())
