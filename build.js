@@ -49,7 +49,6 @@ metalsmith(__dirname)
     }))
     .use(markdown())
 	.use(permalinks({
-      relative: false,
 	  pattern: ':title'
 	  linksets: [{
 	      match: { collection: 'notes' },
