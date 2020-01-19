@@ -66,7 +66,7 @@ metalsmith(__dirname)
         pattern: ':title'
       }
     ]
-  })
+  }))
 
     .use(layouts({
         engine: 'handlebars',
