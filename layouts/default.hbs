@@ -1,11 +1,35 @@
-{{> doc-head }}
-<body>
-    {{> header }}
+{{> header }}
 
-    <main>
-        {{{ contents }}}
-    </main>
+<div class="wrapper" style="padding: 25vh 0 0;">
+	<div class="w3 p-w1">
+		<p><strong>jinesh.org</strong></p>
+		<br>
+	</div>
+</div>
 
-    {{> footer }}
-</body>
-</html>
+<div class="wrapper" style="padding-top: 0px;">
+	<div class="w10" style="margin-left: 0;">
+		<h1 class="s1">{{ title }}</h1>
+	</div>
+	<div class="w4 meta f-l p-w1">
+		<div>Last edited on {{ date }}</div>
+		<div>Comments are disabled</div>
+	</div>
+	<div class="w4 meta f-l p-w1">
+		<div>Documented under Usability</div>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="w7 p-w1">
+		{{{ contents }}}
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="w11" style="margin-left: 0;">
+		<p class="s4">Duis non facilisis sem. Aliquam tincidunt tortor nec urna feugiat facilisis. Suspendisse sollicitudin orci id tristique efficitur. Nunc imperdiet eu tortor a blandit. Donec malesuada dui sit.</p>
+	</div>
+</div>
+
+{{> footer }}
