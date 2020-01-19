@@ -51,22 +51,7 @@ metalsmith(__dirname)
     }))
     .use(markdown())
 
-//    .use(permalinks())
-
-.use(
-  permalinks({
-    pattern: ':title',
-    linksets: [
-      {
-        match: { collection: 'notes' },
-        pattern: ':title'
-      },
-      {
-        match: { collection: 'projects' },
-        pattern: ':title'
-      }
-    ]
-  }))
+    .use(permalinks())
 
     .use(layouts({
         engine: 'handlebars',
