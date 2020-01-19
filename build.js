@@ -50,7 +50,24 @@ metalsmith(__dirname)
         }
     }))
     .use(markdown())
-    .use(permalinks())
+
+//    .use(permalinks())
+
+.use(
+  permalinks({
+    pattern: ':title',
+    linksets: [
+      {
+        match: { collection: 'notes' },
+        pattern: ':title'
+      },
+      {
+        match: { collection: 'projects' },
+        pattern: ':title'
+      }
+    ]
+  })
+
     .use(layouts({
         engine: 'handlebars',
         directory: 'layouts',
