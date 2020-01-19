@@ -49,14 +49,7 @@ metalsmith(__dirname)
     }))
     .use(markdown())
 	.use(permalinks({
-	  pattern: ':title',
-	  linksets: [{
-	      match: { collection: 'notes' },
-	      pattern: ':title'
-	  },{
-	      match: { collection: 'projects' },
-	      pattern: ':title'
-	  }]
+	  pattern: '/:title'
 	}))
     .use(layouts({
         engine: 'handlebars',
