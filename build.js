@@ -57,7 +57,7 @@ metalsmith(__dirname)
         partials: 'layouts/partials'
     }))
     .use(sitemap({
-        hostname: "https://andreasvirkus.me"
+        hostname: "https://jinesh.org"
     }))
     .build(function (err) {
         if (err) throw err;
