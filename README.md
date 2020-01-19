@@ -1,1 +1,1 @@
-Personal website built on Metalsmith (boiler plate by Andreas Virkus). Initial Days.
+Personal website built on Metalsmith (boilerplate by Andreas Virkus). Initial Days.
