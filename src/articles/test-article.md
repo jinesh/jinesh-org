@@ -1,6 +1,6 @@
 ---
 title: Article Test
-permalink: article
+permalink: "article"
 ---
 
 This will be the Test article. And it is.
