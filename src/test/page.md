@@ -1,5 +1,4 @@
 ---
-permalink: page1
 title: Test page
 ---
 
