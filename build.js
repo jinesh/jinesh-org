@@ -54,8 +54,8 @@ metalsmith(__dirname)
 //    .use(permalinks())
 
     .use(permalinks({
-      relative: false,
-      pattern: 'slug'
+      relative: false
+//      pattern: ':permalink'
     }))
 
     .use(layouts({
