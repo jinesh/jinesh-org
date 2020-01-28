@@ -1,7 +1,7 @@
 {
-  "name": "metalsmith-netlify-boilerplate",
+  "name": "jinesh-org",
   "version": "1.0.0",
-  "description": "A setup to get you going on Netlify with a Metalsmith static site.",
+  "description": "Setup for Jinesh.org",
   "main": "build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andreasvirkus/metalsmith-boilerplate.git"
+    "url": "git+https://github.com/jinesh/jinesh-org.git"
   },
   "keywords": [
     "metalsmith",
@@ -38,6 +38,7 @@
     "metalsmith-drafts": "0.0.1",
     "metalsmith-layouts": "^1.8.1",
     "metalsmith-markdown": "^0.2.1",
+    "metalsmith-headings-identifier": "^0.0.11",
     "metalsmith-navigation": "^0.2.9",
     "metalsmith-permalinks": "^2.2.0",
     "metalsmith-sitemap": "^1.2.0",
