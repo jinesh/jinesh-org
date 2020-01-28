@@ -1,6 +1,7 @@
 const metalsmith = require('metalsmith');
 const drafts = require('metalsmith-drafts');
 const markdown = require('metalsmith-markdown');
+const markdown = require('metalsmith-headings-identifier');
 const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
 const layouts = require('metalsmith-layouts');
@@ -50,9 +51,7 @@ metalsmith(__dirname)
         }
     }))
     .use(markdown())
-
-//    .use(permalinks())
-
+    .use(headingsidentifier())
     .use(permalinks({
       relative: false,
       pattern: ':permalink'
