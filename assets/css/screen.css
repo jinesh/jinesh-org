@@ -1,20 +1,23 @@
+/*@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+*/
 * { box-sizing: inherit; }
 
 /* GRID */
 .wrapper {
     width: 100%;
     max-width: 1120px;
-    margin: 0 auto;
-    padding: 50px 0 75px;
+    margin: 0;
+    padding: 50px 0 0;
     position: relative;
 }
 
 .wrapper:before, .wrapper:after, .cf:before, .cf:after { content: " "; display: table; }
 .wrapper:after, .cf:after { clear: both; }
 
-.w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8, .w9, .w10, .w11, .w12 {
+.w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8, .w9, .w10, .w11, .w12, .w13, .w14 {
     width: 100%;
-    padding: 0 12px;
+    padding: 0;
     margin: 0 auto;
 }
 .w1 { max-width: 80px; }
@@ -29,6 +32,8 @@
 .w10 { max-width: 800px; }
 .w11 { max-width: 880px; }
 .w12 { max-width: 960px; }
+.w13 { max-width: 1040px; }
+.w14 { max-width: 1120px; }
 
 .f-l { float: left; }
 .f-r { float: right; }
@@ -41,7 +46,7 @@
 }
 
 
-/* TYPOGRAPHY */
+/* DEFAULTS */
 html {
 	font-size: 100%;
 }
@@ -51,16 +56,36 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;	
     margin: 0;
-    padding: 20px;
+    padding: 0;
     font-size: 1rem;
     font-family: helvetica neue, sans-serif;
-    line-height: 1.563;
-    color: #444;
+    line-height: 1.6;
+    color: #333;
 }
 
 p {
     margin: 0;
     padding: 0 0 25px;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li {
+    padding: 5px 0 10px;
+}
+
+img { max-width: 100%; width: auto; }
+
+a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid #bbb;
+}
+a:hover {
+	background: #e5e5e5;
 }
 
 /* 16, 20, 36, 84, 116 */
@@ -76,9 +101,9 @@ h1, h2, h3, h4, h5, h6 {
 	color: #111;
 }
 .s1 {
-    font-size: 7.25rem;
-    letter-spacing: -6px;
-    line-height: 1;
+    font-size: 72px;
+    letter-spacing: -2.5px;
+    hyphens: auto;
 }
 .s2 {
 	font-size: 84px;
@@ -92,78 +117,53 @@ h1, h2, h3, h4, h5, h6 {
     color: #444;
 }
 .s4 {
-    font-size: 1.25rem;
+    font-size: 15px;
 	font-weight: normal;
     line-height: 1.563;
-    color: #aaa;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 2px solid #bbb;
-}
-a:hover {
-	background: #e5e5e5;
+    color: #999;
 }
 
 .meta {
+	font-size: 13px;
 	color: #aaa;
+    text-transform: uppercase;
 }
 
-
-img { max-width: 100%; width: auto; }
-@media screen and (min-width: 960px) {
-	img { max-width: none; }   
+.header {
+    position: fixed;
+    width: 240px;
+    height: 100vh;
+    text-align: center;
 }
-
-
-/* #CleanUp Needed */
-body {
-    line-height: 1.6;
-    color: #333;
+.header strong {
+    display: block;
+    width: 80px;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 160px;
+    left: 80px;
 }
-.s1 {
-    font-size: 84px;
-    letter-spacing: -3.5px;
-    hyphens: auto;
+.header span {
+    display: block;
+    width: 240px;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 580px;
+    left: 0px;
 }
-.s4 {
-    font-size: 15px;
-    color: #999;
-}
-.wrapper {
-    padding-bottom: 0;
-}
-.w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8, .w9, .w10, .w11, .w12 {
-    padding: 0;
-}
-
-ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-li {
-    padding: 5px 0 10px;
-}
-
-
-
 
 /* BG GRID */
 #grid-wrapper {
 	width: 1120px;
-	margin: 0 auto;
+	margin: 0;
 	position: fixed;
 	top: 0;
-	left: 50%;
-	margin-left: -560px;
+	left: 0;
 	height: 100%;
 	z-index: -1;
 }
 #grid-wrapper div {
-	border-left: 1px dashed #eee;
+	border-left: 1px dashed #e9e9e9;
 	width: 80px;
 	height: 100%;
 	float: left;
@@ -173,5 +173,3 @@ li {
 #grid-wrapper div:last-child {
 	border-right: 1px dashed #eee;
 }
-
-
